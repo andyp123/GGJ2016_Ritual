@@ -12,6 +12,23 @@ ModelImporter:
     100008: room
     100010: round_table
     100012: chair
+    100014: note_0
+    100016: note_1
+    100018: note_10
+    100020: note_11
+    100022: note_12
+    100024: note_13
+    100026: note_14
+    100028: note_15
+    100030: note_2
+    100032: note_3
+    100034: note_4
+    100036: note_5
+    100038: note_6
+    100040: note_7
+    100042: note_8
+    100044: note_9
+    100046: notes
     400000: notebook
     400002: ouija_board
     400004: ouija_puck
@@ -19,24 +36,89 @@ ModelImporter:
     400008: room
     400010: round_table
     400012: chair
+    400014: note_0
+    400016: note_1
+    400018: note_10
+    400020: note_11
+    400022: note_12
+    400024: note_13
+    400026: note_14
+    400028: note_15
+    400030: note_2
+    400032: note_3
+    400034: note_4
+    400036: note_5
+    400038: note_6
+    400040: note_7
+    400042: note_8
+    400044: note_9
+    400046: notes
     2300000: notebook
     2300002: ouija_board
     2300004: ouija_puck
     2300006: room
     2300008: round_table
     2300010: chair
+    2300012: note_0
+    2300014: note_1
+    2300016: note_10
+    2300018: note_11
+    2300020: note_12
+    2300022: note_13
+    2300024: note_14
+    2300026: note_15
+    2300028: note_2
+    2300030: note_3
+    2300032: note_4
+    2300034: note_5
+    2300036: note_6
+    2300038: note_7
+    2300040: note_8
+    2300042: note_9
     3300000: notebook
     3300002: ouija_board
     3300004: ouija_puck
     3300006: room
     3300008: round_table
     3300010: chair
+    3300012: note_0
+    3300014: note_1
+    3300016: note_10
+    3300018: note_11
+    3300020: note_12
+    3300022: note_13
+    3300024: note_14
+    3300026: note_15
+    3300028: note_2
+    3300030: note_3
+    3300032: note_4
+    3300034: note_5
+    3300036: note_6
+    3300038: note_7
+    3300040: note_8
+    3300042: note_9
     4300000: notebook
     4300002: room
     4300004: round_table
     4300006: ouija_puck
     4300008: ouija_board
     4300010: chair
+    4300012: note_14
+    4300014: note_13
+    4300016: note_12
+    4300018: note_11
+    4300020: note_10
+    4300022: note_9
+    4300024: note_8
+    4300026: note_7
+    4300028: note_6
+    4300030: note_5
+    4300032: note_4
+    4300034: note_3
+    4300036: note_2
+    4300038: note_1
+    4300040: note_0
+    4300042: note_15
   materials:
     importMaterials: 1
     materialName: 0
