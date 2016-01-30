@@ -1,7 +1,7 @@
 // Shader created with Shader Forge v1.26 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.26;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False;n:type:ShaderForge.SFN_Final,id:2865,x:32767,y:32712,varname:node_2865,prsc:2|diff-3474-OUT,spec-358-OUT,gloss-1813-OUT,olwid-5651-OUT,olcol-6864-RGB;n:type:ShaderForge.SFN_Multiply,id:6343,x:31852,y:32264,varname:node_6343,prsc:2|A-7736-RGB,B-6665-RGB;n:type:ShaderForge.SFN_Color,id:6665,x:31640,y:32441,ptovrint:False,ptlb:Color,ptin:_Color,varname:_Color,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5019608,c2:0.5019608,c3:0.5019608,c4:1;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31640,y:32264,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:15b2ef77dc6171c46a32105acc42d49d,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Slider,id:358,x:32303,y:32869,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32303,y:32958,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Distance,id:8553,x:32288,y:33119,varname:node_8553,prsc:2|A-5922-XYZ,B-314-XYZ;n:type:ShaderForge.SFN_Multiply,id:5651,x:32469,y:33067,varname:node_5651,prsc:2|A-1692-OUT,B-8553-OUT;n:type:ShaderForge.SFN_ValueProperty,id:1692,x:32288,y:33067,ptovrint:False,ptlb:OutlineWidth,ptin:_OutlineWidth,varname:node_1692,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0.002;n:type:ShaderForge.SFN_ViewPosition,id:314,x:32116,y:33239,varname:node_314,prsc:2;n:type:ShaderForge.SFN_FragmentPosition,id:5922,x:32116,y:33119,varname:node_5922,prsc:2;n:type:ShaderForge.SFN_Color,id:6864,x:32469,y:33214,ptovrint:False,ptlb:OutlineColor,ptin:_OutlineColor,varname:node_6864,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0,c2:0,c3:0,c4:1;n:type:ShaderForge.SFN_LightVector,id:3164,x:31640,y:32610,varname:node_3164,prsc:2;n:type:ShaderForge.SFN_NormalVector,id:5817,x:31640,y:32740,prsc:2,pt:True;n:type:ShaderForge.SFN_Dot,id:1202,x:31820,y:32610,varname:node_1202,prsc:2,dt:4|A-3164-OUT,B-5817-OUT;n:type:ShaderForge.SFN_Append,id:9136,x:32013,y:32610,varname:node_9136,prsc:2|A-1202-OUT,B-3186-OUT;n:type:ShaderForge.SFN_Vector1,id:3186,x:31820,y:32755,varname:node_3186,prsc:2,v1:0;n:type:ShaderForge.SFN_Tex2d,id:9327,x:32183,y:32610,ptovrint:False,ptlb:Ramp,ptin:_Ramp,varname:node_9327,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:3aa06bc02f6b8ef44a54a77fe335701b,ntxv:0,isnm:False|UVIN-9136-OUT;n:type:ShaderForge.SFN_Slider,id:835,x:32026,y:32519,ptovrint:False,ptlb:ToonEffect,ptin:_ToonEffect,varname:node_835,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:1,max:1;n:type:ShaderForge.SFN_Multiply,id:7629,x:32382,y:32590,varname:node_7629,prsc:2|A-6343-OUT,B-9327-RGB,C-835-OUT;n:type:ShaderForge.SFN_Add,id:3474,x:32382,y:32442,varname:node_3474,prsc:2|A-6343-OUT,B-7629-OUT;proporder:6665-7736-358-1813-1692-6864-9327-835;pass:END;sub:END;*/
+/*SF_DATA;ver:1.26;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False;n:type:ShaderForge.SFN_Final,id:2865,x:32917,y:32655,varname:node_2865,prsc:2|diff-3474-OUT,spec-358-OUT,gloss-1813-OUT,emission-7629-OUT,olwid-5651-OUT,olcol-6864-RGB;n:type:ShaderForge.SFN_Multiply,id:6343,x:31852,y:32264,varname:node_6343,prsc:2|A-7736-RGB,B-6665-RGB;n:type:ShaderForge.SFN_Color,id:6665,x:31640,y:32441,ptovrint:False,ptlb:Color,ptin:_Color,varname:_Color,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5019608,c2:0.5019608,c3:0.5019608,c4:1;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31640,y:32264,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:15b2ef77dc6171c46a32105acc42d49d,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Slider,id:358,x:32417,y:32866,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32417,y:32955,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Distance,id:8553,x:32288,y:33119,varname:node_8553,prsc:2|A-5922-XYZ,B-314-XYZ;n:type:ShaderForge.SFN_Multiply,id:5651,x:32469,y:33067,varname:node_5651,prsc:2|A-1692-OUT,B-8553-OUT;n:type:ShaderForge.SFN_ValueProperty,id:1692,x:32288,y:33067,ptovrint:False,ptlb:OutlineWidth,ptin:_OutlineWidth,varname:node_1692,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0.002;n:type:ShaderForge.SFN_ViewPosition,id:314,x:32116,y:33239,varname:node_314,prsc:2;n:type:ShaderForge.SFN_FragmentPosition,id:5922,x:32116,y:33119,varname:node_5922,prsc:2;n:type:ShaderForge.SFN_Color,id:6864,x:32469,y:33214,ptovrint:False,ptlb:OutlineColor,ptin:_OutlineColor,varname:node_6864,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0,c2:0,c3:0,c4:1;n:type:ShaderForge.SFN_LightVector,id:3164,x:31640,y:32610,varname:node_3164,prsc:2;n:type:ShaderForge.SFN_NormalVector,id:5817,x:31640,y:32740,prsc:2,pt:True;n:type:ShaderForge.SFN_Dot,id:1202,x:31820,y:32610,varname:node_1202,prsc:2,dt:4|A-3164-OUT,B-5817-OUT;n:type:ShaderForge.SFN_Append,id:9136,x:32013,y:32610,varname:node_9136,prsc:2|A-1202-OUT,B-3186-OUT;n:type:ShaderForge.SFN_Vector1,id:3186,x:31820,y:32755,varname:node_3186,prsc:2,v1:0;n:type:ShaderForge.SFN_Tex2d,id:9327,x:32183,y:32610,ptovrint:False,ptlb:Ramp,ptin:_Ramp,varname:node_9327,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:3aa06bc02f6b8ef44a54a77fe335701b,ntxv:0,isnm:False|UVIN-9136-OUT;n:type:ShaderForge.SFN_Slider,id:835,x:32026,y:32519,ptovrint:False,ptlb:ToonEffect,ptin:_ToonEffect,varname:node_835,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:1,max:1;n:type:ShaderForge.SFN_Multiply,id:7629,x:32382,y:32590,varname:node_7629,prsc:2|A-6343-OUT,B-9327-RGB,C-835-OUT;n:type:ShaderForge.SFN_Add,id:3474,x:32382,y:32442,varname:node_3474,prsc:2|A-6343-OUT,B-7629-OUT;proporder:6665-7736-358-1813-1692-6864-9327-835;pass:END;sub:END;*/
 
 Shader "Shader Forge/ToonPBR" {
     Properties {
@@ -208,7 +208,8 @@ Shader "Shader Forge/ToonPBR" {
                 float3 node_6343 = (_MainTex_var.rgb*_Color.rgb);
                 float2 node_9136 = float2(0.5*dot(lightDirection,normalDirection)+0.5,0.0);
                 float4 _Ramp_var = tex2D(_Ramp,TRANSFORM_TEX(node_9136, _Ramp));
-                float3 diffuseColor = (node_6343+(node_6343*_Ramp_var.rgb*_ToonEffect)); // Need this for specular when using metallic
+                float3 node_7629 = (node_6343*_Ramp_var.rgb*_ToonEffect);
+                float3 diffuseColor = (node_6343+node_7629); // Need this for specular when using metallic
                 float specularMonochrome;
                 float3 specularColor;
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, _Metallic, specularColor, specularMonochrome );
@@ -231,8 +232,10 @@ Shader "Shader Forge/ToonPBR" {
                 float3 indirectDiffuse = float3(0,0,0);
                 indirectDiffuse += gi.indirect.diffuse;
                 float3 diffuse = (directDiffuse + indirectDiffuse) * diffuseColor;
+////// Emissive:
+                float3 emissive = node_7629;
 /// Final Color:
-                float3 finalColor = diffuse + specular;
+                float3 finalColor = diffuse + specular + emissive;
                 fixed4 finalRGBA = fixed4(finalColor,1);
                 UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
                 return finalRGBA;
@@ -329,7 +332,8 @@ Shader "Shader Forge/ToonPBR" {
                 float3 node_6343 = (_MainTex_var.rgb*_Color.rgb);
                 float2 node_9136 = float2(0.5*dot(lightDirection,normalDirection)+0.5,0.0);
                 float4 _Ramp_var = tex2D(_Ramp,TRANSFORM_TEX(node_9136, _Ramp));
-                float3 diffuseColor = (node_6343+(node_6343*_Ramp_var.rgb*_ToonEffect)); // Need this for specular when using metallic
+                float3 node_7629 = (node_6343*_Ramp_var.rgb*_ToonEffect);
+                float3 diffuseColor = (node_6343+node_7629); // Need this for specular when using metallic
                 float specularMonochrome;
                 float3 specularColor;
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, _Metallic, specularColor, specularMonochrome );
@@ -420,13 +424,14 @@ Shader "Shader Forge/ToonPBR" {
                 UnityMetaInput o;
                 UNITY_INITIALIZE_OUTPUT( UnityMetaInput, o );
                 
-                o.Emission = 0;
-                
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));
                 float3 node_6343 = (_MainTex_var.rgb*_Color.rgb);
                 float2 node_9136 = float2(0.5*dot(lightDirection,normalDirection)+0.5,0.0);
                 float4 _Ramp_var = tex2D(_Ramp,TRANSFORM_TEX(node_9136, _Ramp));
-                float3 diffColor = (node_6343+(node_6343*_Ramp_var.rgb*_ToonEffect));
+                float3 node_7629 = (node_6343*_Ramp_var.rgb*_ToonEffect);
+                o.Emission = node_7629;
+                
+                float3 diffColor = (node_6343+node_7629);
                 float specularMonochrome;
                 float3 specColor;
                 diffColor = DiffuseAndSpecularFromMetallic( diffColor, _Metallic, specColor, specularMonochrome );
