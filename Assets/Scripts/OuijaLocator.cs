@@ -14,14 +14,13 @@ public class OuijaLocator : MonoBehaviour
   private Vector3 puckLastPos;
   private float puckRestTime = 0.0f;
 
+  private OuijaQuestionMap questionMap;
+  private string currentSentence = "";
+
 	void Start ()
   {
+    questionMap = gameObject.GetComponent<OuijaQuestionMap>();
     puckLastPos = ouijaPuck.transform.position;
-
-    // foreach (Transform child in transform)
-    // {
-    //   Debug.Log ( child.name );
-    // }
 	}
 	
 	void Update ()
@@ -34,7 +33,25 @@ public class OuijaLocator : MonoBehaviour
       UpdateNearestLocator();
       if (nearestLocator != null && nearestLocator != previousLocator)
       {
-        Debug.Log(nearestLocator.name);
+        switch (nearestLocator.name)
+        {
+          case "ASK":
+            if (currentSentence.Length > 0 )
+              AskQuestion(currentSentence);
+            currentSentence = "";
+            break;
+          case "GOODBYE":
+            currentSentence = "";
+            break;
+          case "YES":
+          case "NO":
+            currentSentence = nearestLocator.name;
+            break;
+          default:
+            currentSentence += nearestLocator.name;
+            break;
+        }
+        if (currentSentence.Length > 0) Debug.Log(currentSentence);
       }
     }
 
@@ -66,5 +83,22 @@ public class OuijaLocator : MonoBehaviour
     {
       nearestLocator = null;
     } 
+  }
+
+  void AskQuestion (string question)
+  {
+    Debug.Log("This is your question: " + question);
+
+    // match question with question in list and figure out action
+    foreach (QuestionInfo q in questionMap.questions)
+    {
+      if (q.active && q.ouijaString == question)
+      {
+        Debug.Log("I know the answer to your question!");
+        return;
+      }
+    }
+
+    Debug.Log("I can't answer your question.");
   }
 }
