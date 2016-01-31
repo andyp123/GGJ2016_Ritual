@@ -75,6 +75,7 @@ ModelImporter:
     2300038: note_7
     2300040: note_8
     2300042: note_9
+    2300044: //RootNode
     3300000: notebook
     3300002: ouija_board
     3300004: ouija_puck
@@ -97,6 +98,7 @@ ModelImporter:
     3300038: note_7
     3300040: note_8
     3300042: note_9
+    3300044: //RootNode
     4300000: notebook
     4300002: room
     4300004: round_table
