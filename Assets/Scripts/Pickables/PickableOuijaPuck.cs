@@ -27,15 +27,15 @@ public class PickableOuijaPuck : PickableObject
         transform.position = lookAtPosition;
       }
     }
-    else
-    {
-      // use keyboard/joypad
-      x = Input.GetAxis("Horizontal");
-      z = Input.GetAxis("Vertical");
-      moveDir = new Vector3(x, 0.0f, z).normalized;
+    // else
+    // {
+    //   // use keyboard/joypad
+    //   x = Input.GetAxis("Horizontal");
+    //   z = Input.GetAxis("Vertical");
+    //   moveDir = new Vector3(x, 0.0f, z).normalized;
 
-      transform.Translate(moveDir * moveSpeed * Time.deltaTime);
-    }
+    //   transform.Translate(moveDir * moveSpeed * Time.deltaTime);
+    // }
 
     float rotAngle = transform.localPosition.x / maxMoveX * maxRotation;
     transform.localRotation = Quaternion.Euler(0.0f, rotAngle, 0.0f);
@@ -43,12 +43,10 @@ public class PickableOuijaPuck : PickableObject
 
   public override void FocusGained()
   {
-    Debug.Log(transform.name + " FocusGained (PUCK)");
   }
 
   public override void FocusLost()
   {
-    Debug.Log(transform.name + " FocusLost (PUCK)");
   }
 
   public override void Activate()

@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class OuijaLocator : MonoBehaviour
 {
+
+  public Text ouijaGUIText;
 
   public GameObject ouijaPuck;
   public float distanceThreshold = 0.02f;
@@ -21,6 +24,8 @@ public class OuijaLocator : MonoBehaviour
   {
     questionMap = gameObject.GetComponent<OuijaQuestionMap>();
     puckLastPos = ouijaPuck.transform.position;
+
+    ouijaGUIText.text = "";
 	}
 	
 	void Update ()
@@ -42,6 +47,7 @@ public class OuijaLocator : MonoBehaviour
             break;
           case "GOODBYE":
             currentSentence = "";
+            ouijaGUIText.text = "";
             break;
           case "YES":
           case "NO":
@@ -51,7 +57,10 @@ public class OuijaLocator : MonoBehaviour
             currentSentence += nearestLocator.name;
             break;
         }
-        if (currentSentence.Length > 0) Debug.Log(currentSentence);
+        if (currentSentence.Length > 0) //Debug.Log(currentSentence);
+        {
+          ouijaGUIText.text = currentSentence;
+        }
       }
     }
 
@@ -94,6 +103,7 @@ public class OuijaLocator : MonoBehaviour
     {
       if (q.active && q.ouijaString == question)
       {
+        ouijaGUIText.text = q.englishString;
         Debug.Log("I know the answer to your question!");
         return;
       }

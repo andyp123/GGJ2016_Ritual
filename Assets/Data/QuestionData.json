@@ -1,0 +1,35 @@
+{
+    "questions" :
+    [
+        {
+            "englishString" : "Hello?",
+            "ouijaString" : "HELLO",
+            "active" : true
+        },
+        {
+            "englishString" : "Who are you?",
+            "ouijaString" : "WHOAREYOU",
+            "active" : true
+        },
+        {
+            "englishString" : "What are you?",
+            "ouijaString" : "WHATAREYOU",
+            "active" : true
+        },
+        {
+            "englishString" : "Why are you here?",
+            "ouijaString" : "WHYAREYOUHERE",
+            "active" : true
+        },
+        {
+            "englishString" : "How did you die?",
+            "ouijaString" : "HOWDIDYOUDIE",
+            "active" : true
+        },
+        {
+            "englishString" : "Why did you kill yourself?",
+            "ouijaString" : "WHYDIDYOUKILLYOURSELF",
+            "active" : true
+        }
+    ]
+}
