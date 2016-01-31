@@ -11,12 +11,12 @@ public class OuijaPuckMove : MonoBehaviour
 	void Update ()
   {
     float x = Input.GetAxis("Horizontal");
-    float y = -Input.GetAxis("Vertical");
-	  Vector3 moveDir = new Vector3(x, y, 0.0f).normalized;
+    float z = Input.GetAxis("Vertical");
+	  Vector3 moveDir = new Vector3(x, 0.0f, z).normalized;
 
     transform.Translate(moveDir * moveSpeed * Time.deltaTime);
 
     float rotAngle = transform.localPosition.x / maxMoveX * maxRotation;
-    transform.localRotation = Quaternion.Euler(270.0f, 0.0f, rotAngle);
+    transform.localRotation = Quaternion.Euler(0.0f, rotAngle, 0.0f);
 	}
 }
