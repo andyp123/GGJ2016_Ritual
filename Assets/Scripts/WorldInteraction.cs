@@ -7,6 +7,7 @@ public class WorldInteraction : MonoBehaviour
   public bool useCursor = false;
 
   private PickableObject hotObject = null;
+  private PickableObject activeObject = null;
   
   void Start()
   {
@@ -37,7 +38,13 @@ public class WorldInteraction : MonoBehaviour
     // interaction
     if (hotObject && Input.GetButtonDown("Fire1"))
     {
-      hotObject.Interact();
+      activeObject = hotObject;
+      activeObject.Activate();
+    }
+    if (activeObject && Input.GetButtonUp("Fire1"))
+    {
+      activeObject.Deactivate();
+      activeObject = null;
     }
   }
 

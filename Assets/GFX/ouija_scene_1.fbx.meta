@@ -29,6 +29,7 @@ ModelImporter:
     100042: note_8
     100044: note_9
     100046: notes
+    100048: ouija_puck_collider
     400000: notebook
     400002: ouija_board
     400004: ouija_puck
@@ -53,6 +54,7 @@ ModelImporter:
     400042: note_8
     400044: note_9
     400046: notes
+    400048: ouija_puck_collider
     2300000: notebook
     2300002: ouija_board
     2300004: ouija_puck
@@ -76,6 +78,7 @@ ModelImporter:
     2300040: note_8
     2300042: note_9
     2300044: //RootNode
+    2300046: ouija_puck_collider
     3300000: notebook
     3300002: ouija_board
     3300004: ouija_puck
@@ -99,6 +102,7 @@ ModelImporter:
     3300040: note_8
     3300042: note_9
     3300044: //RootNode
+    3300046: ouija_puck_collider
     4300000: notebook
     4300002: room
     4300004: round_table
@@ -121,6 +125,7 @@ ModelImporter:
     4300038: note_1
     4300040: note_0
     4300042: note_15
+    4300044: ouija_puck_collider
   materials:
     importMaterials: 1
     materialName: 0
