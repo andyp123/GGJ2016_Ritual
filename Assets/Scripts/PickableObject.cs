@@ -3,14 +3,18 @@ using System.Collections;
 
 public class PickableObject : MonoBehaviour
 {
+  public virtual void FocusGained()
+  {
+    Debug.Log("PickableObject FocusGained");
+  }
 
-	void Start ()
+  public virtual void FocusLost()
   {
-	
-	}
-	
-	void Update ()
+    Debug.Log("PickableObject FocusLost");
+  }
+
+  public virtual void Interact()
   {
-	
-	}
+    Debug.Log("PickableObject Interact");
+  }
 }

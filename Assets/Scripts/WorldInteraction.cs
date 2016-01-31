@@ -7,7 +7,6 @@ public class WorldInteraction : MonoBehaviour
   public bool useCursor = false;
 
   private PickableObject hotObject = null;
-  private PickableObject activeObject = null;
   
   void Start()
   {
@@ -22,33 +21,23 @@ public class WorldInteraction : MonoBehaviour
   {
     PickableObject targettedObject = FindTargettedObject();
 
-    if (hotObject == null && targettedObject != null)
-      Debug.Log("new hot object!");
-
-    hotObject = targettedObject;
-
-    // if hot object changes, or is lost, release active object
-    if (activeObject != null && activeObject != hotObject)
+    // set hot object
+    if (hotObject != null && hotObject != targettedObject)
     {
-      //activeObject.Release();
-      activeObject = null;
+      hotObject.FocusLost();
+      hotObject = null;
     }
 
+    if (hotObject == null && targettedObject != null)
+    {
+      hotObject = targettedObject;
+      hotObject.FocusGained();
+    }
+
+    // interaction
     if (hotObject && Input.GetButtonDown("Fire1"))
     {
-      //hotObject.Press();
-      activeObject = hotObject;
-      Debug.Log("active object!");
-    }
-    if (activeObject && Input.GetButtonUp("Fire1"))
-    {
-      //activeObject.Release();
-      activeObject = null;
-    }
-
-    if (hotObject)
-    {
-      Debug.DrawLine (cam.transform.position, hotObject.transform.position, Color.yellow);
+      hotObject.Interact();
     }
   }
 
@@ -69,6 +58,7 @@ public class WorldInteraction : MonoBehaviour
     int layerMask = 1 << LayerMask.NameToLayer("PickableObjects");
     hits = Physics.RaycastAll(ray.origin, ray.direction, Mathf.Infinity, layerMask);
 
+    // NOTE: doesn't bother to check proximity
     foreach (RaycastHit hit in hits)
     {
       PickableObject pickable = hit.transform.gameObject.GetComponent<PickableObject>();
