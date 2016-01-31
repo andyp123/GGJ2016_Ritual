@@ -30,6 +30,16 @@ ModelImporter:
     100044: note_9
     100046: notes
     100048: ouija_puck_collider
+    100050: round_table_collider_bottom
+    100052: round_table_collider_leg
+    100054: round_table_collider_top
+    100056: room_floor
+    100058: room_roof
+    100060: radio
+    100062: radio_aerial
+    100064: room_window
+    100066: lamp_shade
+    100068: lamp_wire
     400000: notebook
     400002: ouija_board
     400004: ouija_puck
@@ -55,6 +65,16 @@ ModelImporter:
     400044: note_9
     400046: notes
     400048: ouija_puck_collider
+    400050: round_table_collider_bottom
+    400052: round_table_collider_leg
+    400054: round_table_collider_top
+    400056: room_floor
+    400058: room_roof
+    400060: radio
+    400062: radio_aerial
+    400064: room_window
+    400066: lamp_shade
+    400068: lamp_wire
     2300000: notebook
     2300002: ouija_board
     2300004: ouija_puck
@@ -79,6 +99,16 @@ ModelImporter:
     2300042: note_9
     2300044: //RootNode
     2300046: ouija_puck_collider
+    2300048: round_table_collider_bottom
+    2300050: round_table_collider_leg
+    2300052: round_table_collider_top
+    2300054: room_floor
+    2300056: room_roof
+    2300058: radio
+    2300060: radio_aerial
+    2300062: room_window
+    2300064: lamp_shade
+    2300066: lamp_wire
     3300000: notebook
     3300002: ouija_board
     3300004: ouija_puck
@@ -103,6 +133,16 @@ ModelImporter:
     3300042: note_9
     3300044: //RootNode
     3300046: ouija_puck_collider
+    3300048: round_table_collider_bottom
+    3300050: round_table_collider_leg
+    3300052: round_table_collider_top
+    3300054: room_floor
+    3300056: room_roof
+    3300058: radio
+    3300060: radio_aerial
+    3300062: room_window
+    3300064: lamp_shade
+    3300066: lamp_wire
     4300000: notebook
     4300002: room
     4300004: round_table
@@ -126,6 +166,16 @@ ModelImporter:
     4300040: note_0
     4300042: note_15
     4300044: ouija_puck_collider
+    4300046: round_table_collider_leg
+    4300048: round_table_collider_bottom
+    4300050: round_table_collider_top
+    4300052: room_roof
+    4300054: room_floor
+    4300056: radio
+    4300058: radio_aerial
+    4300060: room_window
+    4300062: lamp_shade
+    4300064: lamp_wire
   materials:
     importMaterials: 1
     materialName: 0

@@ -78,4 +78,43 @@ public class WorldInteraction : MonoBehaviour
     return null;
   }
 
+  public bool GetLookAtPosition(int layerMask, out Vector3 lookAtPosition)
+  {
+    RaycastHit[] hits;
+    Ray ray;
+
+    if (!useCursor)
+    {
+      ray = new Ray(cam.transform.position, cam.transform.forward);
+    }
+    else
+    {
+      ray = cam.ScreenPointToRay(Input.mousePosition);
+    }
+
+
+    hits = Physics.RaycastAll(ray.origin, ray.direction, Mathf.Infinity, layerMask);
+
+    if (hits.Length == 0)
+    {
+      lookAtPosition = Vector3.zero;
+      return false;
+    }
+
+    RaycastHit nearestHit = hits[0];
+    float nearestDistance = 99999999.0f;
+
+    foreach (RaycastHit hit in hits)
+    {
+      float distance = (cam.transform.position - hit.point).magnitude;
+      if (distance < nearestDistance)
+      {
+        nearestHit = hit;
+        nearestDistance = distance;
+      }
+    }
+
+    lookAtPosition = nearestHit.point;
+    return true;
+  }
 }
