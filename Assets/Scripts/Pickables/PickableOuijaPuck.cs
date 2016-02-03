@@ -12,6 +12,7 @@ public class PickableOuijaPuck : PickableObject
   public float maxMoveY = 0.13f;
 
   private bool grabbed = false;
+  private Vector3 grabOffset = Vector3.zero;
 
   void Update ()
   {
@@ -24,7 +25,7 @@ public class PickableOuijaPuck : PickableObject
       Vector3 lookAtPosition = Vector3.zero;
       if (WorldInteraction.GetLookAtPosition(layerMask, out lookAtPosition))
       {
-        transform.position = lookAtPosition;
+        transform.position = lookAtPosition + grabOffset;
       }
     }
     // else
@@ -52,10 +53,18 @@ public class PickableOuijaPuck : PickableObject
   public override void Activate()
   {
     grabbed = true;
+
+    int layerMask = 1 << LayerMask.NameToLayer("OuijaBoard");
+    Vector3 lookAtPosition = Vector3.zero;
+    if (WorldInteraction.GetLookAtPosition(layerMask, out lookAtPosition))
+    {
+      grabOffset = transform.position - lookAtPosition;
+    }
   }
 
   public override void Deactivate()
   {
     grabbed = false;
+    grabOffset = Vector3.zero;
   }
 }

@@ -109,6 +109,8 @@ public class OuijaLocator : MonoBehaviour
       }
     }
 
+    currentSentence = "";
+    ouijaGUIText.text = "";
     Debug.Log("I can't answer your question.");
   }
 }

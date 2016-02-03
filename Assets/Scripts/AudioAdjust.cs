@@ -10,8 +10,7 @@ public struct AudioSettings
 
 public class AudioAdjust : MonoBehaviour
 {
-  public AudioSource audioSource;
-  public AudioLowPassFilter lowPass;
+  public AudioSource[] audioSources;
 
   public AudioSettings[] audioSettings;
   public int firstSettingIndex = 0;
@@ -40,13 +39,19 @@ public class AudioAdjust : MonoBehaviour
   {
     AudioSettings settings = audioSettings[currentSettingIndex];
 
-    if (audioSource != null)
+    foreach (AudioSource audioSource in audioSources)
     {
-      audioSource.volume = settings.sourceVolume;
-    }
-    if (lowPass != null)
-    {
-      lowPass.cutoffFrequency = settings.lowPassCutoffFrequency;
+      if (audioSource != null)
+      {
+        audioSource.volume = settings.sourceVolume;
+      
+        AudioLowPassFilter lowPass = audioSource.gameObject.GetComponent<AudioLowPassFilter>();
+        if (lowPass != null)
+        {
+          lowPass.cutoffFrequency = settings.lowPassCutoffFrequency;
+        }
+      }
     }
   }
+
 }
