@@ -40,6 +40,11 @@ ModelImporter:
     100064: room_window
     100066: lamp_shade
     100068: lamp_wire
+    100070: room_highpoly
+    100072: room.001
+    100074: room.001_MeshPart0
+    100076: room.001_MeshPart1
+    100078: room.001_MeshPart2
     400000: notebook
     400002: ouija_board
     400004: ouija_puck
@@ -75,6 +80,11 @@ ModelImporter:
     400064: room_window
     400066: lamp_shade
     400068: lamp_wire
+    400070: room_highpoly
+    400072: room.001
+    400074: room.001_MeshPart0
+    400076: room.001_MeshPart1
+    400078: room.001_MeshPart2
     2300000: notebook
     2300002: ouija_board
     2300004: ouija_puck
@@ -109,6 +119,10 @@ ModelImporter:
     2300062: room_window
     2300064: lamp_shade
     2300066: lamp_wire
+    2300068: room_highpoly
+    2300070: room.001_MeshPart0
+    2300072: room.001_MeshPart1
+    2300074: room.001_MeshPart2
     3300000: notebook
     3300002: ouija_board
     3300004: ouija_puck
@@ -143,6 +157,10 @@ ModelImporter:
     3300062: room_window
     3300064: lamp_shade
     3300066: lamp_wire
+    3300068: room_highpoly
+    3300070: room.001_MeshPart0
+    3300072: room.001_MeshPart1
+    3300074: room.001_MeshPart2
     4300000: notebook
     4300002: room
     4300004: round_table
@@ -176,6 +194,10 @@ ModelImporter:
     4300060: room_window
     4300062: lamp_shade
     4300064: lamp_wire
+    4300066: room_highpoly
+    4300068: room.001_MeshPart0
+    4300070: room.001_MeshPart1
+    4300072: room.001_MeshPart2
   materials:
     importMaterials: 1
     materialName: 0
