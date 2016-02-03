@@ -27,8 +27,8 @@
             "active" : true
         },
         {
-            "englishString" : "Why did you kill yourself?",
-            "ouijaString" : "WHYDIDYOUKILLYOURSELF",
+            "englishString" : "Where do you keep the biscuits?",
+            "ouijaString" : "BISCUITS",
             "active" : true
         }
     ]
