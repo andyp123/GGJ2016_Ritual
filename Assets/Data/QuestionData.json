@@ -2,18 +2,13 @@
     "questions" :
     [
         {
-            "englishString" : "Hello?",
-            "ouijaString" : "HELLO",
+            "englishString" : "Uncle Tom? Are you there?",
+            "ouijaString" : "UNCLETOM",
             "active" : true
         },
         {
             "englishString" : "Who are you?",
-            "ouijaString" : "WHOAREYOU",
-            "active" : true
-        },
-        {
-            "englishString" : "What are you?",
-            "ouijaString" : "WHATAREYOU",
+            "ouijaString" : "WHO",
             "active" : true
         },
         {

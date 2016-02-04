@@ -45,6 +45,9 @@ ModelImporter:
     100074: room.001_MeshPart0
     100076: room.001_MeshPart1
     100078: room.001_MeshPart2
+    100080: ouija_puck_lense
+    100082: picture_frame
+    100084: picture_frame_stand
     400000: notebook
     400002: ouija_board
     400004: ouija_puck
@@ -85,6 +88,9 @@ ModelImporter:
     400074: room.001_MeshPart0
     400076: room.001_MeshPart1
     400078: room.001_MeshPart2
+    400080: ouija_puck_lense
+    400082: picture_frame
+    400084: picture_frame_stand
     2300000: notebook
     2300002: ouija_board
     2300004: ouija_puck
@@ -123,6 +129,9 @@ ModelImporter:
     2300070: room.001_MeshPart0
     2300072: room.001_MeshPart1
     2300074: room.001_MeshPart2
+    2300076: ouija_puck_lense
+    2300078: picture_frame
+    2300080: picture_frame_stand
     3300000: notebook
     3300002: ouija_board
     3300004: ouija_puck
@@ -161,6 +170,9 @@ ModelImporter:
     3300070: room.001_MeshPart0
     3300072: room.001_MeshPart1
     3300074: room.001_MeshPart2
+    3300076: ouija_puck_lense
+    3300078: picture_frame
+    3300080: picture_frame_stand
     4300000: notebook
     4300002: room
     4300004: round_table
@@ -198,6 +210,9 @@ ModelImporter:
     4300068: room.001_MeshPart0
     4300070: room.001_MeshPart1
     4300072: room.001_MeshPart2
+    4300074: picture_frame
+    4300076: picture_frame_stand
+    4300078: ouija_puck_lense
   materials:
     importMaterials: 1
     materialName: 0

@@ -4,13 +4,13 @@ using System.Collections;
 
 public class OuijaLocator : MonoBehaviour
 {
-
-  public Text ouijaGUIText;
+  public GameUI gameUI;
 
   public GameObject ouijaPuck;
   public float distanceThreshold = 0.02f;
   public float puckRestThreshold = 0.75f;
   public float puckWobbleThreshold = 0.001f;
+
 
   private Transform nearestLocator;
   private Transform previousLocator;
@@ -24,8 +24,6 @@ public class OuijaLocator : MonoBehaviour
   {
     questionMap = gameObject.GetComponent<OuijaQuestionMap>();
     puckLastPos = ouijaPuck.transform.position;
-
-    ouijaGUIText.text = "";
 	}
 	
 	void Update ()
@@ -44,10 +42,11 @@ public class OuijaLocator : MonoBehaviour
             if (currentSentence.Length > 0 )
               AskQuestion(currentSentence);
             currentSentence = "";
+            gameUI.SetOuijaSentence(""); 
             break;
           case "GOODBYE":
             currentSentence = "";
-            ouijaGUIText.text = "";
+            gameUI.SetOuijaSentence(""); 
             break;
           case "YES":
           case "NO":
@@ -57,9 +56,9 @@ public class OuijaLocator : MonoBehaviour
             currentSentence += nearestLocator.name;
             break;
         }
-        if (currentSentence.Length > 0) //Debug.Log(currentSentence);
+        if (currentSentence.Length > 0)
         {
-          ouijaGUIText.text = currentSentence;
+          gameUI.SetOuijaSentence(currentSentence);
         }
       }
     }
@@ -96,21 +95,15 @@ public class OuijaLocator : MonoBehaviour
 
   void AskQuestion (string question)
   {
-    Debug.Log("This is your question: " + question);
-
-    // match question with question in list and figure out action
-    foreach (QuestionInfo q in questionMap.questions)
+    QuestionInfo q;
+    if (questionMap.GetQuestionInfo(question, out q))
     {
-      if (q.active && q.ouijaString == question)
-      {
-        ouijaGUIText.text = q.englishString;
-        Debug.Log("I know the answer to your question!");
-        return;
-      }
+      gameUI.SetSubtitle(q.englishString);
+      Debug.Log("I know the answer to your question!");  
     }
-
-    currentSentence = "";
-    ouijaGUIText.text = "";
-    Debug.Log("I can't answer your question.");
+    else
+    {
+      Debug.Log("I can't answer your question.");
+    }
   }
 }

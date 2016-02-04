@@ -2,11 +2,12 @@
 using System.Collections;
 
 [System.Serializable]
-public struct QuestionInfo
+public class QuestionInfo
 {
   public string englishString;
   public string ouijaString;
-  public bool active;
+  public bool active = false;
+  public string englishAnswer = "";
 }
 
 [System.Serializable]
@@ -27,8 +28,18 @@ public class OuijaQuestionMap : MonoBehaviour
     questions = questionData.questions;
 	}
 	
-	void Update ()
+  public bool GetQuestionInfo (string question, out QuestionInfo questionInfo)
   {
-	
-	}
+    foreach (QuestionInfo q in questions)
+    {
+      if (q.active && q.ouijaString == question)
+      {
+        questionInfo = q;
+        return true;
+      }
+    }
+
+    questionInfo = new QuestionInfo(); // FIXME: UGH. Maybe you are using 'out' incorrectly?
+    return false;
+  }
 }

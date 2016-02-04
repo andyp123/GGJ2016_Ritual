@@ -4,6 +4,7 @@ using System.Collections;
 public class PickableOuijaPuck : PickableObject
 {
   public WorldInteraction WorldInteraction;
+  public GameUI gameUI;
 
   public float moveSpeed = 0.05f;
   public float mouseSensitivity = 5.0f;
@@ -48,6 +49,7 @@ public class PickableOuijaPuck : PickableObject
 
   public override void FocusLost()
   {
+   gameUI.SetOuijaSentence("");
   }
 
   public override void Activate()

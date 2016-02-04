@@ -13,12 +13,10 @@ public class PickableRadio : PickableObject
 
   public override void FocusGained()
   {
-    Debug.Log(transform.name + " FocusGained (RADIO)");
   }
 
   public override void FocusLost()
   {
-    Debug.Log(transform.name + " FocusLost (RADIO)");
   }
 
   public override void Activate()

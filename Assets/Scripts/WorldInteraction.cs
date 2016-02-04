@@ -6,9 +6,10 @@ public class WorldInteraction : MonoBehaviour
   public Camera cam;
   public bool useCursor = false;
 
-  private PickableObject hotObject = null;
-  private PickableObject activeObject = null;
+  private GameObject hotObject = null;
+  private GameObject activeObject = null;
   
+
   void Start()
   {
     if (cam == null)
@@ -18,37 +19,48 @@ public class WorldInteraction : MonoBehaviour
     }
   }
   
+
   void Update()
   {
-    PickableObject targettedObject = FindTargettedObject();
+    GameObject targettedObject = FindTargettedObject();
+    PickableObject[] pickableObjects;
 
     // set hot object
     if (hotObject != null && hotObject != targettedObject)
     {
-      hotObject.FocusLost();
+      pickableObjects = hotObject.GetComponents<PickableObject>();
+      foreach (PickableObject po in pickableObjects)
+        po.FocusLost();
       hotObject = null;
     }
 
     if (hotObject == null && targettedObject != null)
     {
       hotObject = targettedObject;
-      hotObject.FocusGained();
+      pickableObjects = hotObject.GetComponents<PickableObject>();
+      foreach (PickableObject po in pickableObjects)
+        po.FocusGained();
     }
 
     // interaction
     if (hotObject && Input.GetButtonDown("Fire1"))
     {
       activeObject = hotObject;
-      activeObject.Activate();
+      pickableObjects = activeObject.GetComponents<PickableObject>();
+      foreach (PickableObject po in pickableObjects)
+        po.Activate();
     }
     if (activeObject && Input.GetButtonUp("Fire1"))
-    {
-      activeObject.Deactivate();
+    {      
+      pickableObjects = activeObject.GetComponents<PickableObject>();
+      foreach (PickableObject po in pickableObjects)
+        po.Deactivate();
       activeObject = null;
     }
   }
 
-  PickableObject FindTargettedObject()
+
+  GameObject FindTargettedObject()
   {
     RaycastHit[] hits;
     Ray ray;
@@ -71,12 +83,13 @@ public class WorldInteraction : MonoBehaviour
       PickableObject pickable = hit.transform.gameObject.GetComponent<PickableObject>();
       if (pickable != null)
       {
-        return pickable;
+        return hit.transform.gameObject;
       }
     }
 
     return null;
   }
+
 
   public bool GetLookAtPosition(int layerMask, out Vector3 lookAtPosition)
   {
@@ -103,7 +116,7 @@ public class WorldInteraction : MonoBehaviour
 
     RaycastHit nearestHit = hits[0];
     float nearestDistance = 99999999.0f;
-
+    
     foreach (RaycastHit hit in hits)
     {
       float distance = (cam.transform.position - hit.point).magnitude;
