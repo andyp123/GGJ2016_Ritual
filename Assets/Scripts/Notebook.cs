@@ -17,12 +17,15 @@ public class Notebook : MonoBehaviour
 
   public void AddNote (string note)
   {
-    Text newNote = Object.Instantiate(_sampleText) as Text;
-    //newNote.posY = _notes.Length * newNote.height;
-    newNote.text = note;
-    newNote.transform.name = "note";
-    newNote.transform.SetParent(_sampleText.transform.parent, false);
-    newNote.gameObject.SetActive(true);
-    _notes.Add(newNote);
+    if (_notes.Count < _maxNotesPerPage)
+    {
+      Text newNote = Object.Instantiate(_sampleText) as Text;
+      newNote.text = note;
+      newNote.transform.name = "note";
+      newNote.rectTransform.SetParent(_sampleText.rectTransform.parent, false);
+      newNote.rectTransform.Translate(new Vector3(0.0f, -80.0f * _notes.Count * 0.000210975f, 0.0f)); //FIXME: hack
+      newNote.gameObject.SetActive(true);
+      _notes.Add(newNote);
+    }
   }
 }
