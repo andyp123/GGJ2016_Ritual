@@ -8,6 +8,8 @@ public class QuestionInfo
   public string ouijaString;
   public bool active = false;
   public string englishAnswer = "";
+  public string targetEventName = "";
+  public float targetEventDelay = 0.0f;
 }
 
 [System.Serializable]

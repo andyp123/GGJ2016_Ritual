@@ -99,7 +99,7 @@ public class OuijaLocator : MonoBehaviour
     if (questionMap.GetQuestionInfo(question, out q))
     {
       gameUI.SetSubtitle(q.englishString);
-      Debug.Log("I know the answer to your question!");  
+      StartCoroutine (GameManager.instance.eventManager.TriggerEvent(q.targetEventName, q.targetEventDelay));
     }
     else
     {

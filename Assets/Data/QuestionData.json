@@ -7,9 +7,11 @@
             "active" : true
         },
         {
-            "englishString" : "Who are you?",
-            "ouijaString" : "WHO",
-            "active" : true
+            "englishString" : "If you are there, show me a sign!",
+            "ouijaString" : "SHOWSIGN",
+            "active" : true,
+            "targetEventName" : "TOPPLE_PICTURE",
+            "targetEventDelay" : 2.0
         },
         {
             "englishString" : "Why are you here?",

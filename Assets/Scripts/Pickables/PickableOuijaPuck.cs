@@ -17,8 +17,7 @@ public class PickableOuijaPuck : PickableObject
 
   void Update ()
   {
-    float x, z = 0.0f;
-    Vector3 moveDir = Vector3.zero;
+
 
     if (grabbed)
     {
@@ -32,6 +31,9 @@ public class PickableOuijaPuck : PickableObject
     // else
     // {
     //   // use keyboard/joypad
+    //   float x, z = 0.0f;
+    //   Vector3 moveDir = Vector3.zero;
+      
     //   x = Input.GetAxis("Horizontal");
     //   z = Input.GetAxis("Vertical");
     //   moveDir = new Vector3(x, 0.0f, z).normalized;

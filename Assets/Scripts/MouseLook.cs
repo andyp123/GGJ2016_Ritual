@@ -24,8 +24,12 @@ public class MouseLook : MonoBehaviour
 		rotY = rot.y;
 		rotX = rot.x;
 
-		Cursor.visible = showCursor;
-	}
+    if (!showCursor)
+		{
+      Cursor.visible = false;
+      Cursor.lockState = CursorLockMode.Confined;
+	  }
+  }
 
 	void Update ()
 	{
